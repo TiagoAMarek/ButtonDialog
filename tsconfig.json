@@ -13,8 +13,8 @@
     "strictFunctionTypes": true,
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
-    "target": "es5",
+    "target": "ESNext",
     "types": ["vitest/globals", "@testing-library/jest-dom"]
   },
-  "include": ["src", "vitest.config.ts", ".eslintrc"]
+  "include": ["src", "vitest.config.ts", ".eslintrc", "tailwind.config.js"]
 }

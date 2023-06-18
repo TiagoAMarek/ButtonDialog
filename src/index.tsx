@@ -4,6 +4,7 @@ import { Dialog } from "./Dialog";
 
 export type ClassStyles = {
   button?: string;
+  closeButton?: string;
   dialog?: string;
   dialogContainer?: string;
   header?: string;
@@ -30,19 +31,18 @@ export function ButtonDialog({
         className={classStyles?.dialogContainer}
         isModalOpen={isModalOpen}
       >
-        <div className={classStyles?.dialogContainer}>
-          <header className={classStyles?.header}>
-            <button
-              className="cursor-pointer"
-              onClick={() => setIsModalOpen(false)}
-              aria-label={closeButtonAriaLabel}
-            >
-              <CloseIcon />
-            </button>
-          </header>
-          {children}
-        </div>
+        <header className={classStyles?.header}>
+          <button
+            className={classStyles?.closeButton}
+            onClick={() => setIsModalOpen(false)}
+            aria-label={closeButtonAriaLabel}
+          >
+            <CloseIcon />
+          </button>
+        </header>
+        {children}
       </Dialog>
+
       <button
         className={classStyles?.button}
         aria-label={text}
