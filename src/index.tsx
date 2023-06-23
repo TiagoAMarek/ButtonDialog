@@ -18,10 +18,10 @@ export type ButtonDialogProps = {
 };
 
 export function ButtonDialog({
-  text,
   children,
   classStyles,
   closeButtonAriaLabel,
+  text,
 }: ButtonDialogProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
